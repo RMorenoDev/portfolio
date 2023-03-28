@@ -1,20 +1,3 @@
-/*
-  STYLES GUIDE:
-  0. RESET
-  1. LAYOUT
-  2. GENERIC ITEMS
-  3. PARTS OF WEB
-  4. LIST
-  5. FORM
-  5. ANIMATIONS
-  ----------
-  COLORS:
-    color1 => #2c3e50;
-    color2 => #34495e;
-    color3 => #3498db;
-    color4 => #fff;
-*/
-
 /* 0 RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -25,8 +8,7 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+small, strike, strong, sub, sup, tt, var, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
@@ -64,9 +46,11 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 /* ----------------------------------------------------- */
 
+html{
+    scroll-behavior: smooth;
+}
 body{
     text-align: center;
     font:300 20px/1.7 'PT Sans';
@@ -96,6 +80,11 @@ body{
     text-decoration: none;
     text-transform: uppercase;
     font:25px "Bebas Neue";
+    transition: 0.1s;
+}
+.navbar a:hover{
+    scale: 1.05;
+    transition: 0.1s;
 }
 .links img{
 background-color: white;
@@ -103,8 +92,12 @@ border-radius: 55% 25% / 15% 45%;
 width: 100px;
 padding: 50px 50px;
 margin: 20px 20px;
-
+transition: 0.5s;
 }
+.links img:hover{
+    scale: 1.1;
+    transition: 0.5s;
+    }
 .title{
     font:40px "Bebas Neue";
     margin: 20px 0;
@@ -123,6 +116,9 @@ p{
     max-width: 900px;
     margin: 0 auto;
     padding: 0 20px 20px 20px;
+}
+hr{
+    width: 90%;
 }
 .content{
     padding: 20px 0;
@@ -143,6 +139,12 @@ p{
 }
 #proyects img{
     width: 300px;
+    transition: 0.5s;
+
+}
+#proyects img:hover{
+    transition: 0.5s;
+    scale: 1.1;
 }
 .card{
     background-color: #fff;
@@ -202,6 +204,7 @@ background-color: red;
 .footer{
     background-color: rgb(120, 120, 120);
     color: white;
+    margin-bottom: 0px;
 }
 form {
     display: flex;
@@ -237,13 +240,33 @@ form {
     padding: 10px 20px;
     background-color: #002aff;
     color: #fff;
-    border: none;
+    border: 1px solid #002aff;
     border-radius: 5px;
     cursor: pointer;
+    transition: 0.5s;
   }
+  button:hover{
+    color:  #002aff;
+    background-color: #ffffff;
+    border: 1px solid black;
+    transition: 0.5s;
+
+
+  }
+  
 .footer img{
     width: 50px;
 }
 .footer h3 img{
     width: 15px;
+}
+/* Hacer que las secciones aparezcan gradualmente */
+section{
+    opacity: 0;
+    transform: translateY(500px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+.content{
+    opacity: 1;
+    transform: translateY(0);
 }

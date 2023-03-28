@@ -25,3 +25,37 @@ function handleSubmit(event) {
       alert(error.message);
     });
 }
+
+// Detectar cuando se hace scroll en la página
+window.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll("section");
+  const firstSection = document.querySelector("section:first-of-type");
+  firstSection.classList.add("content");
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    // Determinar si la sección está visible en la ventana del navegador
+    if (window.pageYOffset > sectionTop - sectionHeight / 1.5) {
+      section.classList.add("content");
+    } else {
+      if (section != firstSection) {
+        section.classList.remove("content");
+      }
+    }
+  });
+});
+
+// Añadir desplazamiento adicional al ancla
+const enlaces = document.querySelectorAll(".navbar a");
+enlaces.forEach((enlace) => {
+  enlace.addEventListener("click", (event) => {
+    event.preventDefault(); // Prevenir comportamiento por defecto del enlace
+    const destino = document.querySelector(enlace.getAttribute("href"));
+    const posicion = destino.offsetTop;
+    window.scrollTo({
+      top: posicion,
+    });
+  });
+});
