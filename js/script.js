@@ -1,24 +1,3 @@
-// Envio de formulario mediante EmailJS
-const btn = document.getElementById("button");
-const response = document.getElementById("response");
-
-document.getElementById("form").addEventListener("submit", function (event) {
-  event.preventDefault();
-
-  const serviceID = "default_service";
-  const templateID = "template_9mfk20h";
-
-  emailjs.sendForm(serviceID, templateID, this).then(
-    () => {
-      response.innerText = "Enviado con exito!";
-    },
-    (err) => {
-      response.innerText = "Error al enviar!";
-      console.log(JSON.stringify(err));
-    }
-  );
-});
-
 // Detectar cuando se hace scroll en la página
 
 const firstSection = document.querySelector("section:first-of-type");
@@ -37,16 +16,3 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-
-// // Añadir desplazamiento adicional al ancla
-// const enlaces = document.querySelectorAll(".navbar a");
-// enlaces.forEach((enlace) => {
-//   enlace.addEventListener("click", (event) => {
-//     event.preventDefault(); // Prevenir comportamiento por defecto del enlace
-//     const destino = document.querySelector(enlace.getAttribute("href"));
-//     const posicion = destino.offsetTop;
-//     window.scrollTo({
-//       top: posicion,
-//     });
-//   });
-// });
