@@ -160,8 +160,8 @@
         >. Estoy siempre abierto a nuevas oportunidades y proyectos
         interesantes. ¡Gracias!
       </p>
-      <!-- Uso EmailJS como servicio de envio del mensaje -->
-      <form action="#" method="POST" id="contact-form">
+      <!-- Uso formsubmit.co como servicio de envio del mensaje -->
+      <form action="https://formsubmit.co/356144df52ebd8ec42e68bfcd2e7edb0" method="POST" id="form"/>
         <label for="name" class="subtitle">Nombre</label>
         <input type="text" id="name" name="name" required />
 
@@ -171,8 +171,12 @@
         <label for="message" class="subtitle">Mensaje</label>
         <textarea id="message" name="message" required></textarea>
 
-        <button type="submit" class="subtitle">Enviar</button>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://rmorenodev.github.io/portfolio/thanks.html">
+
+        <button type="submit" id="button" class="subtitle">Enviar</button>
       </form>
+      <div id="response" class="subtitle"></div>
     </section>
     <!-- FOOTER -->
     <footer class="content footer">
