@@ -1,30 +1,23 @@
-const form = document.getElementById("contact-form");
-form.addEventListener("submit", handleSubmit);
+// Envio de formulario mediante EmailJS
+const btn = document.getElementById("button");
+const response = document.getElementById("response");
 
-function handleSubmit(event) {
+document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const formData = new FormData(event.target);
-  fetch(event.target.action, {
-    method: form.method,
-    body: formData,
-    headers: {
-      Accept: "application/json",
+  const serviceID = "default_service";
+  const templateID = "template_9mfk20h";
+
+  emailjs.sendForm(serviceID, templateID, this).then(
+    () => {
+      response.innerText = "Enviado con exito!";
     },
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(
-          "ERROR! el envio del formulario aun no ha sido activado"
-        );
-      }
-      alert("El mensaje ha sido enviado con éxito.");
-      form.reset();
-    })
-    .catch((error) => {
-      alert(error.message);
-    });
-}
+    (err) => {
+      response.innerText = "Error al enviar!";
+      console.log(JSON.stringify(err));
+    }
+  );
+});
 
 // Detectar cuando se hace scroll en la página
 

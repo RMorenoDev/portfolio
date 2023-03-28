@@ -161,7 +161,7 @@
         interesantes. ¡Gracias!
       </p>
       <!-- Uso EmailJS como servicio de envio del mensaje -->
-      <form action="#" method="POST" id="contact-form">
+      <form id="form">
         <label for="name" class="subtitle">Nombre</label>
         <input type="text" id="name" name="name" required />
 
@@ -171,8 +171,9 @@
         <label for="message" class="subtitle">Mensaje</label>
         <textarea id="message" name="message" required></textarea>
 
-        <button type="submit" class="subtitle">Enviar</button>
+        <button type="submit" id="button" class="subtitle">Enviar</button>
       </form>
+      <div id="response" class="subtitle"></div>
     </section>
     <!-- FOOTER -->
     <footer class="content footer">
@@ -188,5 +189,14 @@
       </h3>
     </footer>
     <script src="js/script.js"></script>
+    <!-- Script para envio del formulario -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("LuH-DTSnNRquOLNwj");
+    </script>
   </body>
 </html>
