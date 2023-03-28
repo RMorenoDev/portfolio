@@ -27,10 +27,12 @@ function handleSubmit(event) {
 }
 
 // Detectar cuando se hace scroll en la página
+
+const firstSection = document.querySelector("section:first-of-type");
+firstSection.style.opacity = 1;
+
 window.addEventListener("scroll", () => {
   const sections = document.querySelectorAll("section");
-  const firstSection = document.querySelector("section:first-of-type");
-  firstSection.classList.add("content");
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
@@ -38,24 +40,20 @@ window.addEventListener("scroll", () => {
 
     // Determinar si la sección está visible en la ventana del navegador
     if (window.pageYOffset > sectionTop - sectionHeight / 1.5) {
-      section.classList.add("content");
-    } else {
-      if (section != firstSection) {
-        section.classList.remove("content");
-      }
+      section.style.opacity = 1;
     }
   });
 });
 
-// Añadir desplazamiento adicional al ancla
-const enlaces = document.querySelectorAll(".navbar a");
-enlaces.forEach((enlace) => {
-  enlace.addEventListener("click", (event) => {
-    event.preventDefault(); // Prevenir comportamiento por defecto del enlace
-    const destino = document.querySelector(enlace.getAttribute("href"));
-    const posicion = destino.offsetTop;
-    window.scrollTo({
-      top: posicion,
-    });
-  });
-});
+// // Añadir desplazamiento adicional al ancla
+// const enlaces = document.querySelectorAll(".navbar a");
+// enlaces.forEach((enlace) => {
+//   enlace.addEventListener("click", (event) => {
+//     event.preventDefault(); // Prevenir comportamiento por defecto del enlace
+//     const destino = document.querySelector(enlace.getAttribute("href"));
+//     const posicion = destino.offsetTop;
+//     window.scrollTo({
+//       top: posicion,
+//     });
+//   });
+// });
