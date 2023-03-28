@@ -1,0 +1,272 @@
+/* 0 RESET */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ----------------------------------------------------- */
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    text-align: center;
+    font:300 20px/1.7 'PT Sans';
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header{
+    height: 600px;
+    background: url(../assets/img/logoRMorenoDev.png) no-repeat center top;
+    background-size: cover;
+}
+.navbar { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+.navbar{
+    height: 50px;
+    background-color: rgb(66, 66, 66);
+}
+.navbar a{
+    color: white;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font:25px "Bebas Neue";
+    transition: 0.1s;
+}
+.navbar a:hover{
+    scale: 1.05;
+    transition: 0.1s;
+}
+.links img{
+background-color: white;
+border-radius: 55% 25% / 15% 45%;
+width: 100px;
+padding: 50px 50px;
+margin: 20px 20px;
+transition: 0.5s;
+}
+.links img:hover{
+    scale: 1.1;
+    transition: 0.5s;
+    }
+.title{
+    font:40px "Bebas Neue";
+    margin: 20px 0;
+    padding: 20px 0;
+}
+.subtitle{
+    font:30px "Bebas Neue";
+    margin-bottom: 20px;
+}
+.subsubtitle{
+    font:20px "Bebas Neue";
+    margin-bottom: 20px;
+}
+p{
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+}
+hr{
+    width: 90%;
+}
+.content{
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.about{
+    background-color: rgb(120, 120, 120);
+    color: white;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#skills img{
+    width: 50px;
+}
+#proyects img{
+    width: 300px;
+    transition: 0.5s;
+
+}
+#proyects img:hover{
+    transition: 0.5s;
+    scale: 1.1;
+}
+.card{
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    }
+.card{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+
+.list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 10px 10px;
+    
+}
+.list img{
+    width: 100%;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 10px 10px;
+}
+.box{
+background-color: red;
+}
+
+
+
+#proyects{
+    background-color: rgb(120, 120, 120);
+    color: white;
+}
+#proyects .subsubtitle{
+    color: black;
+}
+.contact img{
+    width: 70px;
+}
+.footer{
+    background-color: rgb(120, 120, 120);
+    color: white;
+    margin-bottom: 0px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+/*   
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  } */
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 10px;
+    margin-top: -25px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f0f0f0;
+    font-family: inherit;
+    font-size: inherit;
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 150px;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #002aff;
+    color: #fff;
+    border: 1px solid #002aff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  button:hover{
+    color:  #002aff;
+    background-color: #ffffff;
+    border: 1px solid black;
+    transition: 0.5s;
+
+
+  }
+  
+.footer img{
+    width: 50px;
+}
+.footer h3 img{
+    width: 15px;
+}
+/* Hacer que las secciones aparezcan gradualmente */
+section{
+    opacity: 0;
+    transform: translateY(500px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+.content{
+    opacity: 1;
+    transform: translateY(0);
+}
