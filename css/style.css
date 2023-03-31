@@ -224,8 +224,9 @@ transition: 0.5s;
     background-color: rgb(120, 120, 120);
     color: white;
 }
-#proyects .subsubtitle{
-    color: black;
+#proyects .subsubtitle,
+  #proyects .card p{
+      color: black;
 }
 /* ------------------------------------------------- */
 
@@ -295,6 +296,13 @@ transition: 0.5s;
         width: 100%;
     }
     /* ------- */
+    #proyects .card p{
+        color: black;
+        font-size: small;
+    }
+    #proyects img{
+        width: 75%;
+        transition: 0.5s;
+    }
   }
   /* -------------------------------------------------- */
-  
