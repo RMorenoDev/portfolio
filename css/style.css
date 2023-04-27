@@ -225,9 +225,16 @@ transition: 0.5s;
     color: white;
 }
 #proyects .subsubtitle,
+#proyects .subtitle,
   #proyects .card p{
       color: black;
 }
+#proyects a{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
 /* ------------------------------------------------- */
 
 /* seccion contact */
@@ -247,6 +254,10 @@ transition: 0.5s;
 }
 .footer h3 img{
     width: 15px;
+}
+.footer h5 a{
+    text-decoration: none;
+    color: white;
 }
 /* ------------------------------------------------- */
 /* Media query version PC*/
@@ -282,7 +293,7 @@ transition: 0.5s;
         align-items: center;
         margin: 20px 20px;
         width: 300px;
-        height: 400px;
+        height: 600px;
     }
     /* .card{
         background-color: #fff;
